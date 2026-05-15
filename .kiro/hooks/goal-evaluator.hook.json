@@ -1,0 +1,12 @@
+{
+  "name": "Goal Evaluator",
+  "version": "1.0.0",
+  "description": "Evaluates whether the user's stated goal has been achieved after each agent turn. If not met, instructs the agent to continue working.",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "GOAL EVALUATION CHECK:\n\nReview the conversation from the beginning. The user stated a goal or completion condition (look for phrases like 'Goal:', 'My goal is', 'Keep working until', or any clear completion condition stated at the start).\n\n1. Identify the goal/condition from the conversation.\n2. Based on your work so far (commands run, test results, file changes, build output), determine if the condition is NOW fully satisfied.\n3. If the goal IS met: Respond with '✅ GOAL ACHIEVED' followed by a brief summary of what was accomplished.\n4. If the goal is NOT yet met: Respond with what remains to be done and CONTINUE WORKING toward the goal. Do not ask for permission — just keep going.\n\nIMPORTANT: If no clear goal was stated in the conversation, do nothing and stop normally."
+  }
+}
