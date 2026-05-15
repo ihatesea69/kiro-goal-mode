@@ -1,4 +1,5 @@
 {
+  "enabled": true,
   "name": "Goal Evaluator",
   "version": "1.0.0",
   "description": "Evaluates whether the user's stated goal has been achieved after each agent turn. If not met, instructs the agent to continue working.",

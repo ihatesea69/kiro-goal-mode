@@ -16,11 +16,11 @@ mkdir -p "$TARGET/.kiro/hooks"
 mkdir -p "$TARGET/.kiro/steering"
 
 # Copy hook file
-if [ -f "$TARGET/.kiro/hooks/goal-evaluator.hook.json" ]; then
-  echo "   ⚠️  goal-evaluator.hook.json already exists, backing up..."
-  cp "$TARGET/.kiro/hooks/goal-evaluator.hook.json" "$TARGET/.kiro/hooks/goal-evaluator.hook.json.bak"
+if [ -f "$TARGET/.kiro/hooks/goal-evaluator.kiro.hook" ]; then
+  echo "   ⚠️  goal-evaluator.kiro.hook already exists, backing up..."
+  cp "$TARGET/.kiro/hooks/goal-evaluator.kiro.hook" "$TARGET/.kiro/hooks/goal-evaluator.kiro.hook.bak"
 fi
-cp "$SCRIPT_DIR/.kiro/hooks/goal-evaluator.hook.json" "$TARGET/.kiro/hooks/"
+cp "$SCRIPT_DIR/.kiro/hooks/goal-evaluator.kiro.hook" "$TARGET/.kiro/hooks/"
 
 # Copy steering file
 if [ -f "$TARGET/.kiro/steering/goal-mode.md" ]; then

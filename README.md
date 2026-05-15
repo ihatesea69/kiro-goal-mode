@@ -21,7 +21,7 @@ Copy the hook and steering files into your workspace's `.kiro/` directory:
 git clone https://github.com/YOUR_USERNAME/kiro-goal-mode.git
 
 # Copy files to your workspace
-cp kiro-goal-mode/.kiro/hooks/goal-evaluator.hook.json YOUR_PROJECT/.kiro/hooks/
+cp kiro-goal-mode/.kiro/hooks/goal-evaluator.kiro.hook YOUR_PROJECT/.kiro/hooks/
 cp kiro-goal-mode/.kiro/steering/goal-mode.md YOUR_PROJECT/.kiro/steering/
 ```
 
@@ -62,8 +62,8 @@ Include:
 ## Disabling
 
 To temporarily disable goal mode:
-- Delete or rename `goal-evaluator.hook.json`
-- Or set the hook file content to have `"disabled": true` (not yet supported, just remove the file)
+- Delete or rename `goal-evaluator.kiro.hook`
+- Or set `"enabled": false` in the hook file
 
 ## Limitations
 
