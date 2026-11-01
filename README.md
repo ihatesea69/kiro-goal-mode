@@ -18,14 +18,22 @@ Copy the hook and steering files into your workspace's `.kiro/` directory:
 
 ```bash
 # Clone this repo
-git clone https://github.com/YOUR_USERNAME/kiro-goal-mode.git
+git clone https://github.com/ihatesea69/kiro-goal-mode.git
 
 # Copy files to your workspace
 cp kiro-goal-mode/.kiro/hooks/goal-evaluator.kiro.hook YOUR_PROJECT/.kiro/hooks/
 cp kiro-goal-mode/.kiro/steering/goal-mode.md YOUR_PROJECT/.kiro/steering/
 ```
 
-Or manually copy the files from this repo's `.kiro/` directory.
+Or run the installer, which creates the folders and backs up any existing copy of either file:
+
+```bash
+bash kiro-goal-mode/install.sh YOUR_PROJECT
+```
+
+### Kiro IDE 1.0 and later
+
+The hook ships in the Kiro IDE 0.x `.kiro.hook` format (`when.type: agentStop`). Kiro IDE 1.0 replaced that format with a v1 JSON schema in `.kiro/hooks/*.json`, and `agentStop` became `Stop`. After copying the file, open the Agent Hooks panel and click the upgrade badge on **Goal Evaluator** to convert it. See [What's new in 1.0: Hooks](https://kiro.dev/docs/ide/whats-new-v1/hooks/).
 
 ## Usage
 
